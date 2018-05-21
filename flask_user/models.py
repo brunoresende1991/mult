@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
+import datetime
 from flask_user.mixins import UserMixin
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.ext.declarative import declared_attr
 
 
 db = SQLAlchemy()
@@ -75,7 +77,20 @@ class Theme(db.Model):
 class TenantModel(db.Model):
     __abstract__ = True
 
+    @declared_attr
+    def theme_id(cls):
+        return db.Column(db.Integer, db.ForeignKey('theme.id'), nullable=False)
+
+    @declared_attr
+    def tenant_id(cls):
+        return db.Column(db.Integer, db.ForeignKey('tenant.id'),
+                         nullable=False)
+
     id = db.Column(db.Integer, primary_key=True)
-    theme_id = db.Column(db.Integer, db.ForeignKey('theme.id'), nullable=False)
-    tenant_id = db.Column(db.Integer, db.ForeignKey('tenant.id'),
-                          nullable=False)
+
+
+class Item(TenantModel):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(200), nullable=False)
+    code = db.Column(db.Integer, nullable=False)
+    created_at = db.Column(db.DateTime, default=datetime.datetime.utcnow)
