@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Home</h2>
+    <p>Página inicial.</p><br/>
+    <p><a href={{ url_for('home_page') }}>Home</a> (anyone)</p>
+    <p><a href={{ url_for('members_page') }}>Página dos Membros</a> (login required)</p>
+{% endblock content %}

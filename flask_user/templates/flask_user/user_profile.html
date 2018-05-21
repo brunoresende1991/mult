@@ -1,0 +1,22 @@
+{% extends 'flask_user/member_base.html' %}
+
+{% block content %}
+{% from "flask_user/_macros.html" import render_field, render_checkbox_field, render_submit_field %}
+<h4>{%trans%}User information{%endtrans%}</h4>
+{% if user_manager.enable_change_username %}
+<p><a href="{{ url_for('user.change_username') }}">{%trans%}Change username{%endtrans%}</a></p>
+{% endif %}
+{% if user_manager.enable_change_password %}
+<p><a href="{{ url_for('user.change_password') }}">{%trans%}Change password{%endtrans%}</a></p>
+{% endif %}
+<h4>{%trans%}Theme information{%endtrans%}</h4>
+<p><a href="{{ url_for('user.change_theme') }}">{%trans%}Change theme{%endtrans%}</a></p>
+
+<h4>{%trans%}Tenant information{%endtrans%}</h4>
+<p><a href="{{ url_for('user.add_tenant') }}">{%trans%}Add tenant{%endtrans%}</a></p>
+<p><a href="{{ url_for('user.edit_tenant') }}">{%trans%}Edit tenant alias{%endtrans%}</a></p>
+<p><a href="{{ url_for('user.add_tenant_user') }}">{%trans%}Add tenant user{%endtrans%}</a></p>
+<p><a href="{{ url_for('user.remove_tenant_user') }}">{%trans%}Remove tenant user{%endtrans%}</a></p>
+<p><a href="{{ url_for('user.delete_tenant') }}">{%trans%}Delete tenant{%endtrans%}</a></p>
+
+{% endblock %}

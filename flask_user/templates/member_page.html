@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block style %}
+    <link href={{ url_for('serve_static', filename=filename) }} rel="stylesheet" type="text/css">
+{% endblock style %}
+{% block content %}
+    <h2>Página dos Membros</h2>
+    <p>Esta página só pode ser acessada por membros autenticados.</p><br/>
+    <p><a href={{ url_for('home_page') }}>Home</a> (anyone)</p>
+    <p><a href={{ url_for('members_page') }}>Página dos Membros</a> (login required)</p>
+{% endblock %}
