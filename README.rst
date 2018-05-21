@@ -6,9 +6,10 @@ A Flask lib Multitenancy ready
 ----------------------------------
 
 | Your app need multitenancy infrastructure and you don't want to waste your time out of the business rule? Use MulT, inherit the TenantModel to your own and don't spend anymore time with the architecture.
-| And also to Custom models to each Tenant you can inherit from the Theme.
 
-| There are many others features, as:
+And also to Custom models to each Tenant you can inherit from the Theme.
+
+There are many others features, as:
 
 * **Subdomain and tenant added to the request throught middleware**
 * **Subdomain, tenant and theme added to the context**
@@ -29,6 +30,6 @@ Authors
 |
 | **Contributors**
 | Ling Thio -- ling.thio AT gmail DOT com
-| `Victor Ferraz -- <https://github.com/victorfsf>`_
-| `Arimatea Neto -- <https://github.com/arineto>`_
+| `Victor Ferraz <https://github.com/victorfsf>`_
+| `Arimatea Neto <https://github.com/arineto>`_
 | `Many contributors <https://github.com/lingthio/Flask-User/graphs/contributors>`_
