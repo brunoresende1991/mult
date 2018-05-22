@@ -29,6 +29,7 @@ Authors
 | Bruno Resende -- brunoresende1991 AT gmail DOT com
 |
 | **Contributors**
+| `Vinicius Cardoso Garcia - Advisor<https://github.com/vinicius3w>`_
 | Ling Thio -- ling.thio AT gmail DOT com
 | `Victor Ferraz <https://github.com/victorfsf>`_
 | `Arimatea Neto <https://github.com/arineto>`_
